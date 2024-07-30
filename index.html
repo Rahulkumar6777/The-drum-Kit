@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Drum Kit</title>
+    <link rel="stylesheet" href="drum-kit.css">
+</head>
+
+<body>
+    <h1>The Drum Kit</h1>
+    <h3>made by Rahul Kumar</h3>
+
+    <div class="box">
+        <button class="w btn">w</button>
+        <button class="a btn">a</button>
+        <button class="s btn">s</button>
+        <button class="d btn">d</button>
+        <button class="j btn">j</button>
+        <button class="k btn">k</button>
+        <button class="l btn">l</button>
+    </div>
+</body>
+<script>
+    const buttons = document.querySelectorAll("button");
+    const sounds = {
+        "w": 'sounds/tom-1.mp3',
+        "a": 'sounds/tom-2.mp3',
+        "s": 'sounds/tom-3.mp3',
+        "d": 'sounds/tom-4.mp3',
+        "j": 'sounds/snare.mp3',
+        "k": 'sounds/crash.mp3',
+        "l": 'sounds/kick-bass.mp3'
+    };
+
+    buttons.forEach(button => {
+        button.addEventListener("click", drumClick);
+    });
+
+    function drumClick(event) {
+        const buttonClass = event.target.classList[0];
+        for (let rk in sounds) {
+            if (buttonClass === rk) {
+                const audio = new Audio(sounds[rk]);
+                audio.play();
+                break;
+            }
+        }
+    }
+</script>
+
+</html>
