@@ -13,8 +13,14 @@ buttons.forEach(button => {
     button.addEventListener("click", drumClick);
 });
 
+document.addEventListener("keydown", function(event) {
+    drumClick(event);
+});
+
+
+
 function drumClick(event) {
-    const buttonClass = event.target.classList[0];
+    const buttonClass = event.type === "click" ? event.target.classList[0] : event.key;
     for (let rk in sounds) {
         if (buttonClass === rk) {
             const audio = new Audio(sounds[rk]);
@@ -23,4 +29,3 @@ function drumClick(event) {
         }
     }
 }
-
