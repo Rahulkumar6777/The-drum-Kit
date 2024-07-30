@@ -17,6 +17,29 @@ h3 {
     text-shadow: 3px 0 greenyellow;
 }
 
+
+.btn {
+    background-color: #DA0463;
+    border: 10px solid #2bd809;
+    font-size: 5rem;
+    font-family: 'Arvo', cursive;
+    font-weight: 900;
+    color: #0f20e1;
+    border-radius: 15px;
+    
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
 .w {
     background-image: url("images/w.png");
 }
@@ -52,26 +75,4 @@ h3 {
 .animation {
     box-shadow: 0 3px 4px 0 #DBEDF3;
     opacity: 0.5;
-}
-
-.btn {
-    background-color: #DA0463;
-    border: 10px solid #2bd809;
-    font-size: 5rem;
-    font-family: 'Arvo', cursive;
-    font-weight: 900;
-    color: #0f20e1;
-    border-radius: 15px;
-    
-    width: 150px;
-    height: 150px;
-    text-align: center;
-    margin: 10px;
-    background-color: #fff;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.btn:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.05);
 }
